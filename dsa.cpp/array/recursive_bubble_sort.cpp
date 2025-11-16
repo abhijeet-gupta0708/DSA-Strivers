@@ -1,19 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-void bubblesort(vector<int>&arr,int min, int size)
+void bubblesort(vector<int>&arr,int size)
 {   
-    if(size<=1)
-    return ;
-    int high=min;
-    for(int i=0;i<high;i++)
+    if(size==1)
+    return;
+    // int high=min;
+    for(int i=0;i<size-1;i++)
     {
-   if (arr[i]>arr[high])
+   if (arr[i]>arr[i+1])
    {
-    swap(arr[i],arr[high]);
+    swap(arr[i],arr[i+1]);
    }
 //    high--;
     }
-   bubblesort(arr,min+1,size-1);
+   bubblesort(arr,size-1);
 }
 int main()
 {   int n;
@@ -25,10 +25,10 @@ int main()
     {
     cin>>arr[i];
     }
-    bubblesort(arr,0,n-1);
+    bubblesort(arr,n);
      for(int i=0;i<n;i++)
      {
-    cout<<arr[i];
+    cout<<" "<<arr[i]<<" ";
      }
 
 }
