@@ -3,10 +3,10 @@ using namespace std;
 int main()
 {
     int row,col;
-    cout<<"Enter the no of rows and no of col : \n";
+    cout<<"Enter the no of rows and no of col :\n";
     cin>>row>>col;
     int arr[row][col];
-    cout<<"Enter the Elements of Array : \n ";
+    cout<<"Enter the Elements of Array :\n";
     // Taking the Elements from User
     for(int i=0;i<row;i++)
     {
