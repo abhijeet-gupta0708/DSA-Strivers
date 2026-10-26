@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+// Define the class Which is going gto act like tree
+class Node
+{
+    public:
+    int data;
+    Node *left,*right;
+
+    Node(int value)
+    {
+        data=value;
+        left=right=nullptr;
+    }
+
+}
+int main()
+{
+    int x,first,second;
+    cout<<"Enter the Root Element of the Tree";
+    cin>>x;
+    Node * root=new Node(x);
+    queue<Node*>qu;
+    qu.push(root);
+
+    while(!qu.empty())
+    {
+        Node *temp=qu.front();
+        qu.pop();
+        cout<<"Enter the Value of left Node"<<temp->data<<endl;
+        cin>>first;
+        if(first!=-1)
+        {
+            temp->left=new Node(first);
+            qu.push(temp->left);
+        }
+        // ENtering the Second or right side element
+        cout<<"Enter the Value of Rigth Node"<<temp->data<<endl;
+        cin>>second;
+        if(second!=-1)
+        {
+            temp->right=new Node(second);
+            qu.push(temp->right);
+        }
+    }
+
+}
