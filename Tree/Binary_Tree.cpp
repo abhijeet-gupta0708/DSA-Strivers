@@ -14,6 +14,7 @@ class Node
     }
 };
 
+
  Node * binarytree()
 {
     int x,first,second;
@@ -31,4 +32,5 @@ int main()
 
     Node *root;
     root=binarytree();
+    
 }
